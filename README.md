@@ -32,21 +32,22 @@
 
 ## 使用
 
-1. 克隆项目
+### 克隆项目
 
 ```bash
 git clone https://github.com/your-repo/email-sender.git
 cd email-sender
 ```
 
-2. 安装依赖
+### 安装依赖
 
 ```bash
 pip install -r requirements.txt
 ```
 
-3. 配置文件
-   在运行程序前，请确保在项目根目录下创建并正确配置 config.yaml 文件。配置文件的示例如下：
+### 配置文件
+
+在运行程序前，请确保在项目根目录下创建并正确配置 config.yaml 文件。配置文件的示例如下：
 
 ```yaml
 backend:
@@ -70,13 +71,15 @@ send:
 -   send.backend_url：邮件内容生成的后端 URL。
 -   send.data_path：Excel 数据文件的路径。
 
-1. 数据
-   将包含收件人信息的 Excel 文件放置在项目目录中，并确保该文件的路径与配置文件中的 data_path 一致。Excel 文件需确保包含以下列：
+### 数据
+
+将包含收件人信息的 Excel 文件放置在项目目录中，并确保该文件的路径与配置文件中的 data_path 一致。Excel 文件需确保包含以下列：
 
 -   姓名
 -   邮箱
 -   Username
 -   Password
 
-5. 运行项目
-   首先运行`backend.py`文件，然后再运行 `sender.py`
+### 运行项目
+
+首先运行`backend.py`文件，然后再运行 `sender.py`
