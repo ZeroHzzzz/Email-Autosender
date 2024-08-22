@@ -1,0 +1,9 @@
+backend:
+    port:
+send:
+    sender:
+    sendernickname:
+    auth_code:
+    subject:
+    backend_url:
+    data_path:
