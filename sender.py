@@ -25,7 +25,7 @@ def send_email(sender, auth_code, nickname, receiver, subject, text):
     message['To'] = Header(f"Receiver<{receiver}>", 'utf-8')
     
     try:
-        server = smtplib.SMTP_SSL('smtp.qq.com', 465)
+        server = smtplib.SMTP_SSL('smtp.qq.com')
         server.login(sender, auth_code)
         server.sendmail(sender, receiver, message.as_string())
         server.close()
