@@ -94,13 +94,13 @@ send:
 
 无
 
-# Default
+### Default
 
-## GET 返回页面
+#### GET 返回页面
 
 > GET /email
 
-### 请求参数
+##### 请求参数
 
 ```json
 {
@@ -117,12 +117,22 @@ send:
 | » username | body | string | 是   | none |
 | » pwd      | body | string | 是   | none |
 
-### 返回结果
+##### 返回结果
 
 | 状态码 | 状态码含义                                              | 说明 | 数据模型 |
 | ------ | ------------------------------------------------------- | ---- | -------- |
 | 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | 成功 | Inline   |
 
-#### 返回示例
+###### 返回示例
 
 将返回渲染完成的 html 页面 -> Demo
+
+## Additional
+
+使用过程中，qq 邮箱会有一定的发送限制，可以在程序运行中加入`time.sleep(3)`一类的语句以尽量减少风控的问题。我使用过程中，发送 17 条邮件之后，会出现类似于以下的报错：
+
+```bash
+Error: 无法发送邮件，失败邮箱为：example@qq.com ，失败原因为： Connection unexpectedly closed
+```
+
+这个时候可以尝试更换邮箱或者重新获取一个新的授权码来解决这个问题。
