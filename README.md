@@ -7,7 +7,7 @@
 ## 功能
 
 -   邮件生成：通过 HTML 模板生成个性化邮件内容。
--   邮件发送：使用 send.py 脚本发送生成的邮件。
+-   邮件发送：使用 `send.py` 脚本发送生成的邮件。
 
 ## 文件说明
 
@@ -25,10 +25,10 @@
     templates.html
 ```
 
--   backend.py：后端处理逻辑，包含邮件内容的生成和数据处理。
--   sender.py：负责发送邮件的功能模块。
--   templates.html：邮件的 HTML 模板，用于定义邮件的样式和内容。
--   config.yaml：配置文件，包含邮件发送的所有配置信息。
+-   `backend.py`：后端处理逻辑，包含邮件内容的生成和数据处理。
+-   `sender.py`：负责发送邮件的功能模块。
+-   `templates.html`：邮件的 HTML 模板，用于定义邮件的样式和内容。
+-   `config.yaml`：配置文件，包含邮件发送的所有配置信息。
 
 ## 使用
 
@@ -47,7 +47,7 @@ pip install -r requirements.txt
 
 ### 配置文件
 
-在运行程序前，请确保在项目根目录下创建并正确配置 config.yaml 文件。配置文件的示例如下：
+在运行程序前，请确保在项目根目录下创建并正确配置 `config.yaml` 文件。配置文件的示例如下：
 
 ```yaml
 backend:
@@ -63,22 +63,22 @@ send:
 
 **配置文件说明**
 
--   backend.port：Flask 服务器运行的端口号。
--   send.sender：发送邮件的邮箱地址。
--   send.sendernickname：发件人昵称。须符合对应邮箱的 From 合法性检查
--   send.auth_code：发送邮箱的 SMTP 授权码。
--   send.subject：邮件主题。
--   send.backend_url：邮件内容生成的后端 URL。
--   send.data_path：Excel 数据文件的路径。
+-   `backend.port`：Flask 服务器运行的端口号。
+-   `send.sender`：发送邮件的邮箱地址。
+-   `send.sendernickname`：发件人昵称。须符合对应邮箱的 From 合法性检查
+-   `send.auth_code`：发送邮箱的 SMTP 授权码。
+-   `send.subject`：邮件主题。
+-   `send.backend_url`：邮件内容生成的后端 URL。
+-   `send.data_path`：Excel 数据文件的路径。
 
 ### 数据
 
-将包含收件人信息的 Excel 文件放置在项目目录中，并确保该文件的路径与配置文件中的 data_path 一致。Excel 文件需确保包含以下列：
+将包含收件人信息的 Excel 文件放置在项目目录中，并确保该文件的路径与配置文件中的 `data_path` 一致。Excel 文件需确保包含以下列：
 
--   姓名
--   邮箱
--   Username
--   Password
+-   `姓名`
+-   `邮箱`
+-   `Username`
+-   `Password`
 
 ### 运行项目
 
@@ -125,7 +125,7 @@ send:
 
 ###### 返回示例
 
-将返回渲染完成的 html 页面 -> Demo
+将返回渲染完成的 html 页面 -> [Demo](https://htmlpreview.github.io/?https://github.com/ZeroHzzzz/Email-Autosender/blob/main/demo.html)
 
 ## Additional
 
